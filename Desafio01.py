@@ -5,7 +5,7 @@ print("*"*35)
 print("TIMES A SEREM SORTEADOS: \nSANTOS - FLAMENGO - PALMEIRAS\nFORTALEZA - BOTAFOGO - CORINTHIANS")
 print("*"*35)
 
-sorteio=random.randint(1,19)
+sorteio=random.randint(1,18)
 nomeTime=input("EM QUAL TIME DESEJA JOGAR? ")
 if sorteio >= 1 and sorteio <= 3:
     print("O TIME SORTEADO FOI O SANTOS")

@@ -41,9 +41,13 @@ nSorteados.sort()
 print(f"NÚMEROS SORTEADOS: {nSorteados}")
 print("-" * 50)
 
+cont=0
 for i in nSorteados:
     if i in nEscolhidos:
-        print(f"VOCÊ ACERTOU OS NÚMEROS: ", i, end=" ")
+        cont +=1
+print(f"VOCÊ ACERTOU {cont} NÚMERO(S)")
+print("-"*30)
+#print(f"VOCÊ ACERTOU OS NÚMEROS: ", i, end=" ")
 
 
 

@@ -8,33 +8,41 @@ ap=0
 valAposta = float(input("QUAL VALOR DESEJA APOSTAR? "))
 if valAposta >= 50 and valAposta <= 100:
     while ap < 4:
-        aposta1 = int(input(f"ESCOLHA 4 NÚMEROS: "))
+        aposta1 = int(input(f"ESCOLHA O {ap+1}° NÚMERO: "))
+        if aposta1 > 50:
+            print("ERRO!- INFORME VALOR ENTRE 1 e 50")
+            continue
         ap += 1
         nEscolhidos.append(aposta1)
 elif valAposta >= 101 and valAposta <= 150:
     while ap < 5:
-        aposta2 = int(input("ESCOLHA 5 NÚMEROS: "))
+        aposta2 = int(input(f"ESCOLHA O {ap+1}° NÚMERO: "))
+        if aposta2 > 50:
+            print("ERRO!- INFORME VALOR ENTRE 1 e 50")
+            continue
         ap += 1
         nEscolhidos.append(aposta2)
 elif valAposta >= 151:
     while ap < 6:
-        aposta3 = int(input("ESCOLHA 6 NÚMEROS: "))
+        aposta3 = int(input(f"ESCOLHA O {ap+1}° NÚMERO: "))
+        if aposta3 > 50:
+            print("ERRO!- INFORME VALOR ENTRE 1 e 50")
+            continue
         ap += 1
         nEscolhidos.append(aposta3)
 else:
     print("VALOR DA APOSTA NÃO É ACEITO!!")
+    quit()
 nEscolhidos.sort()
 print("-"*25)
 print(f"SEU JOGO: {nEscolhidos}")
 print("-"*25)
 
-for i in range(51):
+while cont <= 6:
     numSorteio = random.randint(1, 50)
     if numSorteio not in nSorteados:
         nSorteados.append(numSorteio)
         cont += 1
-    if cont >= 6:
-        break
 
 print("-" * 50)
 nSorteados.sort()

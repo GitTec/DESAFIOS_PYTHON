@@ -38,7 +38,7 @@ print("-"*25)
 print(f"SEU JOGO: {nEscolhidos}")
 print("-"*25)
 
-while cont <= 6:
+while cont < 6:
     numSorteio = random.randint(1, 50)
     if numSorteio not in nSorteados:
         nSorteados.append(numSorteio)
@@ -60,15 +60,15 @@ print("-"*30)
 if cont == 0:
     print("VOCÊ PERDEU TUDO")
 elif cont == 1:
-    print(f"APOSTOU {valAposta}R$ E GANHOU {valAposta + (valAposta / 2)}R$")
+    print(f"APOSTOU {valAposta:.2f}R$ E GANHOU {valAposta + (valAposta / 2):.2f}R$")
 elif cont == 2:
-    print(f"APOSTOU {valAposta}R$ E GANHOU {valAposta*2}R$")
+    print(f"APOSTOU {valAposta:.2f}R$ E GANHOU {valAposta*2:.2f}R$")
 elif cont == 3:
-    print(f"APOSTOU {valAposta}R$ E GANHOU {valAposta**2}R$")
+    print(f"APOSTOU {valAposta:.2f}R$ E GANHOU {valAposta**2:.2f}R$")
 elif cont == 4:
-    print(f"APOSTOU {valAposta}R$ E GANHOU {valAposta**3}R$")
+    print(f"APOSTOU {valAposta:.2f}R$ E GANHOU {valAposta**3:.2f}R$")
 elif cont == 5:
-    print(f"APOSTOU {valAposta}R$ E GANHOU {valAposta**4}R$")
+    print(f"APOSTOU {valAposta:.2f}R$ E GANHOU {valAposta**4:.2f}R$")
 else:
     print(f"VOCÊ GANHOU 1 MILHÃO DE R$")
 print("-"*30)

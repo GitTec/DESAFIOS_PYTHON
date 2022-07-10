@@ -57,6 +57,21 @@ print(f"VOCÊ ACERTOU {cont} NÚMERO(S)")
 print("-"*30)
 #print(f"VOCÊ ACERTOU OS NÚMEROS: ", i, end=" ")
 
+if cont == 0:
+    print("VOCÊ PERDEU TUDO")
+elif cont == 1:
+    print(f"APOSTOU {valAposta}R$ E GANHOU {valAposta + (valAposta / 2)}R$")
+elif cont == 2:
+    print(f"APOSTOU {valAposta}R$ E GANHOU {valAposta*2}R$")
+elif cont == 3:
+    print(f"APOSTOU {valAposta}R$ E GANHOU {valAposta**2}R$")
+elif cont == 4:
+    print(f"APOSTOU {valAposta}R$ E GANHOU {valAposta**3}R$")
+elif cont == 5:
+    print(f"APOSTOU {valAposta}R$ E GANHOU {valAposta**4}R$")
+else:
+    print(f"VOCÊ GANHOU 1 MILHÃO DE R$")
+print("-"*30)
 
 
 

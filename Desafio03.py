@@ -11,18 +11,29 @@ print("-"*30)
 print("     JOGO DA ADIVINHAÇAO")
 print("-"*30)
 
-sort=random.randint(1, 5)
+valSort=random.randint(1, 5)
 valAposta=int(input("QUANTO DESEJA APOSTAR? "))
-palpite=int(input("QUAL VALOR SERÁ SORTEADO? "))
-if palpite == sort:
-    print(f"VOCÊ GANHOU {valAposta*2}")
-elif palpite == sort:
-    print(f"VOCÊ GANHOU {(valAposta+(50/100*valAposta))}")
-elif palpite == sort:
-    print(f"VOCÊ GANHOU {(valAposta+(25/100*valAposta))}")
-else:
-    print("-"*30)
-    print("INFELIZMENTE, VOCÊ NÃO ACERTOU")
-    print("-"*30)
+print("-"*30)
+
+vez = 0
+while vez < 3:
+    palpite = int(input("CHUTE UM VALOR? "))
+    vez += 1
+
+    if palpite < valSort:
+        print(f"O VALOR É MAIOR QUE {palpite}")
+    elif palpite > valSort:
+        print(f"O VALOR É MENOR QUE {palpite}")
+    elif vez > 4:
+        print("INFELIZMENTE ACABARAM AS CHANCES, VOCÊ PERDEU!!!")
+
+        if palpite == valSort:
+            print(f"PARABÉNS!!! VOCÊ GANHOU {valAposta * 2}R$")
+        elif palpite == valSort:
+            print(f"PARABÉNS!!! VOCÊ GANHOU {(valAposta + (50 / 100 * valAposta))}R$")
+        elif palpite == valSort:
+            print(f"PARABÉNS!!! VOCÊ GANHOU {(valAposta + (25 / 100 * valAposta))}R$")
+        break
+
 
 

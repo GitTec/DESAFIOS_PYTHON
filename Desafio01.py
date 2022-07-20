@@ -6,7 +6,8 @@ print("TIMES A SEREM SORTEADOS: \nSANTOS - FLAMENGO - PALMEIRAS\nFORTALEZA - BOT
 print("*"*35)
 
 sorteio=random.randint(1,18)
-nomeTime=input("EM QUE TIME DESEJA APOSTAR? ")
+nomeTime=input("EM QUAL TIME DESEJA APOSTAR? ")
+
 if sorteio >= 1 and sorteio <= 3:
     print("O TIME SORTEADO FOI O SANTOS")
     if nomeTime == "SANTOS":
@@ -18,7 +19,7 @@ elif sorteio > 3 and sorteio <= 6:
     if nomeTime == "FLAMENGO":
         print("PARABENS VOCÊ GANHOU")
     else:
-        print("INFELIZMENTE VOCÊ PERDEU")
+        print("INFELIZMENTE TU PERDEU")
 elif sorteio > 6 and sorteio <= 9:
     print("O TIME SORTEADO FOI O PALMEIRAS")
     if nomeTime == "PALMEIRAS":
